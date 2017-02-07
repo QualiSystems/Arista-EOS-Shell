@@ -5,11 +5,11 @@ import re
 
 from cloudshell.networking.arista.eos.arista_eos_command_actions import install_firmware, copy
 from cloudshell.networking.arista.eos.arista_eos_command_actions import show_boot as get_current_os_version
+from cloudshell.networking.devices.flows.action_flows import LoadFirmwareFlow
+from cloudshell.networking.devices.networking_utils import UrlParser
 
 from cloudshell.networking.cisco.cisco_command_actions import get_current_boot_config, \
     remove_port_configuration_commands, reload_device
-from cloudshell.networking.devices.flows.action_flows import LoadFirmwareFlow
-from cloudshell.networking.devices.networking_utils import UrlParser
 
 
 class AristaEOSLoadFirmwareFlow(LoadFirmwareFlow):

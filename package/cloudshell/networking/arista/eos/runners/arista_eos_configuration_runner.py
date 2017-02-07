@@ -1,7 +1,8 @@
 from cloudshell.networking.arista.eos.arista_eos_cli_handler import AristaEOSCliHandler
+from cloudshell.networking.devices.runners.configuration_runner import ConfigurationRunner
+
 from cloudshell.networking.cisco.flow.cisco_restore_flow import CiscoRestoreFlow
 from cloudshell.networking.cisco.flow.cisco_save_flow import CiscoSaveFlow
-from cloudshell.networking.devices.runners.configuration_runner import ConfigurationRunner
 
 
 class AristaEOSConfigurationRunner(ConfigurationRunner):

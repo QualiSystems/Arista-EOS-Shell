@@ -1,9 +1,7 @@
+from cloudshell.api.cloudshell_api import CloudShellAPISession
+from cloudshell.core.logger import qs_logger
 from cloudshell.networking.arista.eos.arista_eos_cli_handler import AristaEOSCliHandler
 from cloudshell.networking.arista.eos.flow.arista_eos_load_firmware_flow import AristaEOSLoadFirmwareFlow
-
-from cloudshell.api.cloudshell_api import CloudShellAPISession
-from cloudshell.cli.cli import CLI
-from cloudshell.core.logger import qs_logger
 from cloudshell.networking.devices.runners.firmware_runner import FirmwareRunner
 from cloudshell.shell.core.context import ResourceCommandContext
 

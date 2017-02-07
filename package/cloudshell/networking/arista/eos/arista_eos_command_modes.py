@@ -19,8 +19,8 @@ class AristaEOSDefaultCommandMode(CommandMode):
 
 
 class AristaEOSEnableCommandMode(CommandMode):
-    # PROMPT = r'(?:(?!\)).)#\s*$'
-    PROMPT = r'#\s*$'
+    PROMPT = r'(?:(?!\)).)#\s*$'
+    # PROMPT = r'#\s*$'
     ENTER_COMMAND = 'enable'
     EXIT_COMMAND = ''
 
@@ -39,7 +39,7 @@ class AristaEOSEnableCommandMode(CommandMode):
 class AristaEOSConfigCommandMode(CommandMode):
     PROMPT = r'\(config.*\)#\s*$'
     ENTER_COMMAND = 'configure terminal'
-    EXIT_COMMAND = 'exit'
+    EXIT_COMMAND = 'end'
 
     def __init__(self, context):
         """
@@ -47,12 +47,10 @@ class AristaEOSConfigCommandMode(CommandMode):
 
         :param context:
         """
-        exit_action_map = {
-            self.PROMPT: lambda session, logger: session.send_line('exit', logger)}
+
         CommandMode.__init__(self, AristaEOSConfigCommandMode.PROMPT,
                              AristaEOSConfigCommandMode.ENTER_COMMAND,
-                             AristaEOSConfigCommandMode.EXIT_COMMAND,
-                             exit_action_map=exit_action_map)
+                             AristaEOSConfigCommandMode.EXIT_COMMAND)
 
 
 CommandMode.RELATIONS_DICT = {

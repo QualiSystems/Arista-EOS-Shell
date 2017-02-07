@@ -1,7 +1,8 @@
 from cloudshell.networking.arista.eos.arista_eos_cli_handler import AristaEOSCliHandler
+from cloudshell.networking.devices.runners.connectivity_runner import ConnectivityRunner
+
 from cloudshell.networking.cisco.flow.cisco_add_vlan_flow import CiscoAddVlanFlow
 from cloudshell.networking.cisco.flow.cisco_remove_vlan_flow import CiscoRemoveVlanFlow
-from cloudshell.networking.devices.runners.connectivity_runner import ConnectivityRunner
 
 
 class AristaEOSConnectivityRunner(ConnectivityRunner):

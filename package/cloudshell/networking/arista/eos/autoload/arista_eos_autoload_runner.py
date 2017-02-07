@@ -1,8 +1,8 @@
 from cloudshell.networking.arista.eos.arista_eos_cli_handler import AristaEOSCliHandler
 from cloudshell.networking.arista.eos.autoload.arista_eos_autoload import AristaEOSAutoload
+from cloudshell.networking.devices.runners.autoload_runner import AutoloadRunner
 
 from cloudshell.networking.cisco.flow.cisco_autoload_flow import CiscoAutoloadFlow
-from cloudshell.networking.devices.runners.autoload_runner import AutoloadRunner
 
 
 class AristaEOSAutoloadRunner(AutoloadRunner):
