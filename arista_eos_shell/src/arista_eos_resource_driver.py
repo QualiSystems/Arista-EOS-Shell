@@ -1,19 +1,19 @@
+from cloudshell.networking.arista.runners.arista_autoload_runner import AristaAutoloadRunner as AutoloadRunner
+from cloudshell.networking.arista.runners.arista_configuration_runner import AristaConfigurationRunner as ConfigurationRunner
+from cloudshell.networking.arista.runners.arista_connectivity_runner import AristaConnectivityRunner as ConnectivityRunner
+from cloudshell.networking.arista.runners.arista_run_command_runner import AristaRunCommandRunner as CommandRunner
+from cloudshell.networking.arista.runners.arista_state_runner import AristaStateRunner as StateRunner
 from cloudshell.networking.devices.driver_helper import get_logger_with_thread_id, get_api, get_cli
-from cloudshell.networking.networking_resource_driver_interface import NetworkingResourceDriverInterface
-from cloudshell.shell.core.context import ResourceCommandContext
 from cloudshell.shell.core.context_utils import get_attribute_by_name
 from cloudshell.shell.core.driver_utils import GlobalLock
 from cloudshell.shell.core.resource_driver_interface import ResourceDriverInterface
 
-from cloudshell.networking.arista.eos.autoload.arista_eos_autoload_runner import AristaEOSAutoloadRunner as AutoloadRunner
-from cloudshell.networking.arista.eos.runners.arista_eos_configuration_runner import AristaEOSConfigurationRunner as ConfigurationRunner
-from cloudshell.networking.arista.eos.runners.arista_eos_connectivity_runner import AristaEOSConnectivityRunner as ConnectivityRunner
-from cloudshell.networking.arista.eos.runners.arista_eos_firmware_runner import AristaEOSFirmwareRunner as FirmwareRunner
-from cloudshell.networking.arista.eos.runners.arista_eos_run_command_runner import AristaEOSRunCommandRunner as CommandRunner
-from cloudshell.networking.arista.eos.runners.arista_eos_state_runner import AristaEOSStateRunner as StateRunner
+from cloudshell.networking.arista.runners.arista_firmware_runner import AristaFirmwareRunner as FirmwareRunner
 
 
-class AristaEOSResourceDriver(ResourceDriverInterface, NetworkingResourceDriverInterface, GlobalLock):
+class AristaEOSResourceDriver(ResourceDriverInterface,
+                              # NetworkingResourceDriverInterface,
+                              GlobalLock):
     SUPPORTED_OS = ['EOS']  # .1.3.6.1.2.1.1.1.0 sysDescr "Arista Networks EOS version 4.16.6M running on an Arista Networks DCS-7280SE-72"
 
     def __init__(self):

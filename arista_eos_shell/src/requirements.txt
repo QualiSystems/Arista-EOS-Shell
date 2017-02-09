@@ -1,1 +1,1 @@
-cloudshell-networking-cisco
+cloudshell-networking-arista

@@ -9,7 +9,7 @@
 
     <!-- The server admin username, password and domain to use when deploying -->
     <username>admin</username>
-    <password>ad</password>
+    <password>admin</password>
     <domain>Global</domain>
 
     <!-- Simple patterns to filter when sending the driver to the server separated by semicolons (e.g. "file.xml;logs/", also supports regular expressions),
